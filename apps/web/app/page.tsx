@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card } from "@repo/ui/card";
+import { Card, Hello } from "@repo/ui";
 import { Code } from "@repo/ui/code";
 import styles from "./page.module.css";
 import { Button } from "@repo/ui/button";
@@ -58,6 +58,7 @@ export default function Page(): JSX.Element {
         <p>
           examples/basic&nbsp;
           <Code className={styles.code}>web</Code>
+          <Hello name="hello nextjs" />
         </p>
         <div>
           <a
