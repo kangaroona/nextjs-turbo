@@ -12,6 +12,12 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "deploy": {
+      // A workspace's `deploy` task depends on the `build`,
+      // `test`, and `lint` tasks of the same workspace
+      // being completed.
+      "dependsOn": ["build", "lint"]
     }
   }
 }
