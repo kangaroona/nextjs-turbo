@@ -4,8 +4,10 @@ import { Card } from "@repo/ui/card";
 import { Code } from "@repo/ui/code";
 import styles from "./page.module.css";
 import { Button } from "@repo/ui/button";
+import { Button as ShauiBtn } from "@/components/ui/button";
 import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { cn } from "@/lib/utils";
 function Gradient({
   conic,
   className,
@@ -85,7 +87,7 @@ export default function Page(): JSX.Element {
         <Button appName="docs" className={styles.button}>
           Click me!
         </Button>
-
+        <ShauiBtn className="text-red-200">click shan btn</ShauiBtn>
         <div className={styles.hero}>
           <div className={styles.heroContent}>
             <div className={styles.logos}>
