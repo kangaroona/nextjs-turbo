@@ -7,7 +7,8 @@ import { Button } from "@repo/ui/button";
 import { Button as ShauiBtn } from "@/components/ui/button";
 import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { cn } from "@/lib/utils";
+import { ModeToggle } from "./ModeToggle";
+import { Todos } from "./Todos";
 function Gradient({
   conic,
   className,
@@ -65,29 +66,13 @@ export default function Page(): JSX.Element {
             examples/basic&nbsp;
             <Code className={styles.code}>docs</Code>
           </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              By{" "}
-              <Image
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                height={24}
-                priority
-                src="/vercel.svg"
-                width={100}
-              />
-            </a>
-          </div>
+          <ModeToggle />
         </div>
-
         <Button appName="docs" className={styles.button}>
           Click me!
         </Button>
         <ShauiBtn className="text-red-200">click shan btn</ShauiBtn>
+        <Todos />
         <div className={styles.hero}>
           <div className={styles.heroContent}>
             <div className={styles.logos}>
@@ -137,7 +122,6 @@ export default function Page(): JSX.Element {
             </div>
           </div>
         </div>
-
         <div className={styles.grid}>
           {LINKS.map(({ title, href, description }) => (
             <Card className={styles.card} href={href} key={title} title={title}>
