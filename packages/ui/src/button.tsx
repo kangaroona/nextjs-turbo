@@ -22,7 +22,7 @@ export const Button = ({ children, className, appName }: ButtonProps) => {
     queryKey: ["test"],
     queryFn: getData,
   });
-  console.log("test data", data);
+  // console.log("test data", data);
   return (
     <button
       className={className}

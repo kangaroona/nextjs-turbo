@@ -6,7 +6,8 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "deploy": "turbo deploy"
+    "deploy": "turbo deploy",
+    "changeLog": "pnpm changeset"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
