@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Card, Hello } from "@repo/ui";
 import { Code } from "@repo/ui/code";
 import styles from "./page.module.css";
-import { Button } from "@repo/ui/button";
+//import { Button } from "@repo/ui/button";
 
 function Gradient({
   conic,
@@ -58,8 +58,8 @@ export default function Page(): JSX.Element {
         <p>
           examples/basic&nbsp;
           <Code className={styles.code}>web</Code>
-          <Hello name="hello nextjs" />
         </p>
+        <Hello name="hello nextjs" />
         <div>
           <a
             href="https://vercel.com?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"
@@ -78,11 +78,6 @@ export default function Page(): JSX.Element {
           </a>
         </div>
       </div>
-
-      <Button appName="web" className={styles.button}>
-        Click me!
-      </Button>
-
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.logos}>
@@ -110,7 +105,6 @@ export default function Page(): JSX.Element {
               />
             </div>
           </div>
-          <Gradient className={styles.backgroundGradient} conic />
         </div>
       </div>
 
