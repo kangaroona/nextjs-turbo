@@ -1,11 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import {
-  useQuery,
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 export interface ButtonProps {
   children: ReactNode;
   className?: string;
@@ -22,7 +18,7 @@ export const Button = ({ children, className, appName }: ButtonProps) => {
     queryKey: ["test"],
     queryFn: getData,
   });
-  // console.log("test data", data);
+  console.log("test data", data, isError);
   return (
     <button
       className={className}
